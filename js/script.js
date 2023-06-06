@@ -7,9 +7,9 @@ Creare una funzione per capire se la parola inserita è palindroma
 console.log('JS OK')
 
 
-function isPalindrome(str) {
-    for (let i = 0; i < str.length / 2; i++) {
-        if (str[i] != str[str.length - 1 - i]) {
+function isPalindrome(word) {
+    for (let i = 0; i < word.length / 2; i++) {
+        if (word[i] != word[word.length - 1 - i]) {
             return false;
         }
     }
@@ -36,16 +36,14 @@ function getRandomNumber(max) {
 // funzione valutarzione pari o dispari
 function isEven(cpuValue, userValue){
     let even = false;
-    if(cpuValue + userValue % 2 == 0) {
-        let even = true;
+    if( (cpuValue + userValue) % 2 == 0) {
+        even = true;
     }
-    else {
-        even = false;
-    }
-    return;
-}
+    
+return even;
+  }
 // richiesta di un nu mero da 1 a 5 all'utente
-const userChoice = prompt('scegli un numero da 1 a 5' , 3)
+const userChoice = parseInt(prompt('scegli un numero da 1 a 5' , 3))
 if(userChoice > 5 || userChoice <= 0){
     alert('inserisci un numero valido')
 }
@@ -55,12 +53,3 @@ console.log(userChoice , cpuChoice)
 const evenCheck = isEven(cpuChoice, userChoice )
 console.log(evenCheck)
 
-
-
-/*
-const sum = parseInt(userChoice) + parseInt(cpuChoice);
-console.log(sum)
-
-const sumCheck = isEven(sum)
-console.log(sumCheck)
-*/
