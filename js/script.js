@@ -6,7 +6,7 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 console.log('JS OK')
 
-
+/*
 function isPalindrome(word) {
     for (let i = 0; i < word.length / 2; i++) {
         if (word[i] != word[word.length - 1 - i]) {
@@ -15,9 +15,24 @@ function isPalindrome(word) {
     }
     return true;
 }
+*/
+function isPalindrome(word) {
+    let isPalindrome = false;
+    let result = '';
+    for (let i = word.length - 1; i >= 0; i--) {
+        result += word.charAt(i)
+        console.log(result)
+    
+        if(word === result) {
+            isPalindrome = true;
+        }
+    }
+  return isPalindrome;
+}
 
-const lookingForpalindromeWord = isPalindrome(prompt('dimmi una parola e ti diro` se e` palindroma', 'anna'))
-console.log(lookingForpalindromeWord)
+const wordNeedCheck = prompt('dimmi una parola e ti diro` se e` palindroma', 'anna')
+const wordCheck = isPalindrome(wordNeedCheck)
+console.log(wordCheck)
 
 /*
 Pari e Dispari
